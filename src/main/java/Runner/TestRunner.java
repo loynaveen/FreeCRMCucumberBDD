@@ -7,10 +7,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {
-		"/Users/loyoladsouza/Desktop/QA/SeleniumWorkspace/FreeCrmBDDFramework/src/main/java/Features/contact.feature" }, glue = {
+		"/Users/loyoladsouza/Desktop/QA/SeleniumWorkspace/FreeCrmBDDFramework/src/main/java/Features/tagging.feature" }, glue = {
 				"stepDefinitions" }, plugin = { "pretty", "html:html-output/cucumber.html",
 						"json:json_output/cucumber.json",
-						"junit:junit_xml/cucumber.xml" }, dryRun = false, monochrome = true)
+						"junit:junit_xml/cucumber.xml" }, dryRun = false, monochrome = true, tags = "@SmokeTest or @RegressionTest or @End2End")
 
 public class TestRunner {
 
