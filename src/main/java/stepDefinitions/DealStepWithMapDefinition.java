@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -71,17 +73,15 @@ public class DealStepWithMapDefinition {
 		for (Map<String, String> data : deals.asMaps(String.class, String.class)) {
 			Actions a = new Actions(driver);
 			a.moveToElement(driver.findElement(By.name("title"))).click().sendKeys(data.get("title")).build().perform();
-			// driver.findElement(By.name("title")).sendKeys(data.get("title"));
 			driver.findElement(By.name("amount")).sendKeys(data.get("amount"));
 			driver.findElement(By.name("commission")).sendKeys(data.get("commission"));
 			driver.findElement(By.name("probability")).sendKeys(data.get("probability"));
 			driver.findElement(By.xpath("//button[contains(@class, 'ui linkedin button')]")).click();
-
-			// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			a.moveToElement(driver.findElement(By.xpath("//a[@href='/deals']//parent::div//button//i"))).click().build()
-					.perform();
-//			Thread.sleep(3000);
-//			driver.findElement(By.xpath("//a[@href='/deals/new']/button")).click();
+			Thread.sleep(5000);
+//			WebDriverWait wait = new WebDriverWait(driver, 5);
+//			wait.until(ExpectedConditions
+//					.presenceOfElementLocated(By.xpath("//a[@href='/deals']//parent::div//button//i")));
+			driver.findElement(By.xpath("//a[@href='/deals']//parent::div//button//i")).click();
 		}
 	}
 

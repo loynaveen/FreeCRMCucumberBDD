@@ -1,71 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="17" time="0.545">
-    <testcase classname="Free CRM Application Testing" name="Login with correct username and correct password" time="0.138">
-        <system-out><![CDATA[Given This is a valid login test............................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Login with Incorrect username and correct password" time="0.002">
-        <system-out><![CDATA[Given This is a invalid login test..........................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Create a contact" time="0.004">
-        <system-out><![CDATA[Given This is a contact test case...........................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Create a deal" time="0.004">
-        <system-out><![CDATA[Given This is a deal test case..............................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Create a task" time="0.001">
-        <system-out><![CDATA[Given This is a contact task case...........................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Create a case" time="0.001">
-        <system-out><![CDATA[Given This is a case test case..............................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Verify left panel links" time="0.001">
-        <system-out><![CDATA[Given Clicking on left panel links..........................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a deal" time="0.001">
-        <system-out><![CDATA[Given Search deal test......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a contact" time="0.001">
-        <system-out><![CDATA[Given Search contact test...................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a case" time="0">
-        <system-out><![CDATA[Given Search case test......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a task" time="0.001">
-        <system-out><![CDATA[Given Search task test......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a call" time="0.001">
-        <system-out><![CDATA[Given Search call test......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a email" time="0.001">
-        <system-out><![CDATA[Given Search email test.....................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a docs" time="0.001">
-        <system-out><![CDATA[Given Search docs test......................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a forms" time="0.001">
-        <system-out><![CDATA[Given Search forms test.....................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Search a report" time="0.005">
-        <system-out><![CDATA[Given Search report test....................................................passed
-]]></system-out>
-    </testcase>
-    <testcase classname="Free CRM Application Testing" name="Application Logout" time="0.001">
-        <system-out><![CDATA[Given clicking on logout button.............................................passed
-]]></system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="12.705">
+    <testcase classname="Deals data creation" name="Free CRM Create a new deal scenario" time="12.447">
+        <failure message="TypeError: browsingContext.currentWindowGlobal is null&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'Loyolas-MBP', ip: 'fe80:0:0:0:8c0:44a4:caef:68d7%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.3.1', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 111.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230321111920, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 22.4.0, moz:processID: 6667, moz:profile: /var/folders/hd/k0sss5ss03d..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: c5c040ed-7a80-44a5-955c-45ffd94a5730&#10;*** Element info: {Using=xpath, value=//a[@href='/deals']//parent::div//button//i}" type="org.openqa.selenium.WebDriverException"><![CDATA[Given User is already on Login Page.........................................passed
+When Title of login page is Free CRM........................................passed
+Then User enters username and password......................................passed
+Then User clicks on login button............................................passed
+Then User is on home page...................................................passed
+Then User clicks on Deals button............................................passed
+Then user enters deal details...............................................failed
+Then close browser..........................................................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: TypeError: browsingContext.currentWindowGlobal is null
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Loyolas-MBP', ip: 'fe80:0:0:0:8c0:44a4:caef:68d7%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.3.1', java.version: '17.0.6'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 111.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230321111920, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 22.4.0, moz:processID: 6667, moz:profile: /var/folders/hd/k0sss5ss03d..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c5c040ed-7a80-44a5-955c-45ffd94a5730
+*** Element info: {Using=xpath, value=//a[@href='/deals']//parent::div//button//i}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at stepDefinitions.DealStepWithMapDefinition.user_enters_deal_details(DealStepWithMapDefinition.java:82)
+	at ✽.user enters deal details(file:///Users/loyoladsouza/Desktop/QA/SeleniumWorkspace/FreeCrmBDDFramework/src/main/java/Features/dealsmap.feature:13)
+]]></failure>
     </testcase>
 </testsuite>
